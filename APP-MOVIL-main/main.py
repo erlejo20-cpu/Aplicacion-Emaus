@@ -10,7 +10,7 @@ if os.environ.get('ANDROID_ARGUMENT'):
 else:
     data_dir = base_dir
 
-app = Flask(__name__, template_folder=os.path.join(base_dir, 'templates'), static_folder=base_dir, static_url_path='/static')
+app = Flask(__name__, template_folder=base_dir, static_folder=base_dir, static_url_path='/static')
 app.secret_key = "emaus_secret_key"
 CONFIG_FILE = os.path.join(data_dir, "config.json")
 UPLOAD_FOLDER = os.path.join(data_dir, 'uploads')
